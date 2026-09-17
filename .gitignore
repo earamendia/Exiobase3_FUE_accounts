@@ -2,7 +2,8 @@
 .Rhistory
 .RData
 .Ruserdata
+_targets/*
 outputs/*
 msg/*
-_targets/
 setup.R
+_targets.yaml

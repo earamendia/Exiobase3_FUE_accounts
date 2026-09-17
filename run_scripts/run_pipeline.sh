@@ -1,8 +1,8 @@
 #!/bin/bash
 # Runs pipeline to produce EXIOBASE final- and useful energy accounts
 # Author: Emmanuel Aramendia
-# Date: 05/03/2026
-# Requirements: XXGB RAM, 1 core
+# Date: 17/09/2026
+# Requirements: 80GB RAM, 1 core
 # Approx. run time on Aire: ~6 hours
 
 #SBATCH --job-name=fue_pipeline
@@ -32,7 +32,7 @@ set -e
 # Actual workflow set out below
 
 # Removing previously built results
-rm -f $SCRATCH/WorkflowOutputs/Exiobase_FUE_vecs/outputs/*
+rm -f $SCRATCH/WorkflowOutputs/Exiobase3_FUE_accounts/outputs/*
 
 # Loading miniforge and activating conda environment
 module load miniforge/24.7.1 || {
@@ -44,13 +44,13 @@ module load miniforge/24.7.1 || {
 conda activate rfue
 
 # Setting working directory
-cd /users/earear/gitrepos/Exiobase_FUE_vecs/
+cd /users/earear/gitrepos/Exiobase3_FUE_accounts/
 
 # Run targets pipeline
 Rscript run_scripts/run_pipeline.R
 
 # Check that the outputs are successfully created
-if [! -f "$SCRATCH/WorkflowOutputs/Exiobase_FUE_vecs/outputs/energy_pba_cba_accounts.csv"]; then
+if [! -f "$SCRATCH/WorkflowOutputs/Exiobase3_FUE_accounts/outputs/energy_pba_cba_accounts.csv"]; then
 	echo "ERROR: the output file energy_pba_cba_accounts.csv has not been created." 
 	exit 1
 fi
@@ -59,16 +59,16 @@ fi
 conda-lock -f env/environment.yaml -p linux-64 --lockfile env/conda-lock.yaml
 
 # Creating a run_metadata folder, and copy-pasting lockfile in there, with the results of the pipeline
-mkdir /mnt/scratch/earear/Workflows/Exiobase_FUE_vecs/outputs/run_metadata
-cp env/conda-lock.yaml /mnt/scratch/earear/Workflows/Exiobase_FUE_vecs/outputs/run_metadata/conda-lock.yaml
+mkdir /mnt/scratch/earear/Workflows/Exiobase3_FUE_accounts/outputs/run_metadata
+cp env/conda-lock.yaml /mnt/scratch/earear/Workflows/Exiobase3_FUE_accounts/outputs/run_metadata/conda-lock.yaml
 
 # Logging the hash of the current git commit
-git rev-parse HEAD > /mnt/scratch/earear/Workflows/Exiobase_FUE_vecs/outputs/run_metadata/git_commit.txt
-git branch --show-current > /mnt/scratch/earear/Workflows/Exiobase_FUE_vecs/outputs/run_metadata/git_branch.txt
-git status --porcelain > /mnt/scratch/earear/Workflows/Exiobase_FUE_vecs/outputs/run_metadata/git_status.txt
+git rev-parse HEAD > /mnt/scratch/earear/Workflows/Exiobase3_FUE_accounts/outputs/run_metadata/git_commit.txt
+git branch --show-current > /mnt/scratch/earear/Workflows/Exiobase3_FUE_accounts/outputs/run_metadata/git_branch.txt
+git status --porcelain > /mnt/scratch/earear/Workflows/Exiobase3_FUE_accounts/outputs/run_metadata/git_status.txt
 
 # Logging date
-date > /mnt/scratch/earear/Workflows/Exiobase_FUE_vecs/outputs/run_metadata/run_timestamp.txt
+date > /mnt/scratch/earear/Workflows/Exiobase3_FUE_accounts/outputs/run_metadata/run_timestamp.txt
 
 # Asserting that the job has been completed successfully (if we got to the end of the bash script)
 echo "Job completed successfully"
