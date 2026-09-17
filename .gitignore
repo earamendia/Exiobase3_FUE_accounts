@@ -3,5 +3,6 @@
 .RData
 .Ruserdata
 outputs/*
+msg/*
 _targets/
 setup.R
