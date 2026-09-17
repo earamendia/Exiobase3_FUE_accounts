@@ -1,0 +1,17 @@
+name: rfue
+channels:
+ - conda-forge
+dependencies:
+ - conda-lock=4.0.0
+ - r-base=4.5.1
+ - r-data.table=1.17.8
+ - r-here=1.0.2
+ - r-magrittr=2.0.4
+ - r-matrix=1.7_4
+ - r-targets=1.12.0
+ - r-openxlsx=4.2.8.1
+ - r-stringr=1.6.0
+ - r-renv=1.1.7
+ - r-assertthat=0.2.1
+ - r-qs2=0.1.6
+ - r-bit64=4.6.0_1
