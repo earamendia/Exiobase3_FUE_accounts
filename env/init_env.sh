@@ -4,7 +4,7 @@
 module load miniforge
 
 # Set right filepath
-cd /users/earear/gitrepos/Exiobase_FUE_vecs/
+cd /users/earear/gitrepos/Exiobase3_FUE_accounts/
 
 # Creating and activating conda environment
 conda env create -f env/environment.yaml
