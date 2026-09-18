@@ -1,18 +1,20 @@
 cff-version: 1.2.0
-title: "Code to generate the final- and useful-stage energy and exergy extensions for EXIOBASE3"
-version: v1.0.0
-license: "MIT"
-type: software
-abstract: "This is the code used to generate the final- and useful-stage energy and exergy extensions for EXIOBASE3."
 message: "If you use this software, please cite it as below."
+title: "Code to generate the final- and useful-stage energy and exergy extensions for EXIOBASE3"
+abstract: "This is the code used to generate the final- and useful-stage energy and exergy extensions for EXIOBASE3."
 authors:
   - given-names: Emmanuel
     family-names: Aramendia
-    affiliation: University of Leeds
-orcid: https://orcid.org/0000-0002-5964-6776
+    affiliation: "University of Leeds"
+    orcid: "https://orcid.org/0000-0002-5964-6776"
+version: v1.0.0
+date-released: "2026-09-18"
+repository-code: "https://github.com/earamendia/Exiobase3_FUE_accounts"
+license: MIT
+type: software
 keywords:
-  - energy extensions
-  - energy accounts
-  - input output
-  - MRIO
-  - EXIOBASE
+  - "energy extensions"
+  - "energy accounts""
+  - "input output""
+  - "MRIO"
+  - "EXIOBASE"
