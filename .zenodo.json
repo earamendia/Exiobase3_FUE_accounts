@@ -6,28 +6,17 @@
             "affiliation": "University of Leeds"
         }
     ],
-    "title": "Code to generate the final- and useful-stage energy and exergy extensins for EXIOBASE3"
+    "title": "Code to generate the final- and useful-stage energy and exergy extensins for EXIOBASE3",
     "version": "1.0.0",
     "access_right": "open",
-    "related_identifiers": [
-        {
-            "identifier": "https://doi.org/XXX",
-            "relation": "isSupplementTo",
-            "resource_type": "publication-article"
-        },
-	{
-	    "identifier": "https://doi.org/YYY",
-            "relation": "isSourceOf",
-            "resource_type": "dataset"
-    ],
     "keywords": [
         "energy extensions",
         "energy accounts",
         "input output",
-	"MRIO",
-	"EXIOBASE"
+        "MRIO",
+        "EXIOBASE"
     ],
     "license": "mit",
     "upload_type": "software",
-    "language": "eng",
+    "language": "eng"
 }
