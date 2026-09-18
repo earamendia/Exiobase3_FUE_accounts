@@ -9,7 +9,7 @@ authors:
   - given-names: Emmanuel
     family-names: Aramendia
     affiliation: University of Leeds
-    orcid: "https://orcid.org/0000-0002-5964-6776"
+    orcid: https://orcid.org/0000-0002-5964-6776
 keywords:
   - energy extensions
   - energy accounts
