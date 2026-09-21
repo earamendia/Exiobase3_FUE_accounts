@@ -13,8 +13,8 @@ The dataset was therefore generated running the pipeline on the Aire High Perfor
 
 Then, one needs to download the EXIOBASE3 database and to modify the variable `path_to_exiobase_set` to the folder where the EXIOBASE3 data is used, e.g., `EXIOBASE3/`. One needs the following files and folders:
 
-* the ixi tables, to be located in the `EXIOBASE3/` folder, under a year-by-year .zip folder, e.g., `IOT_1995_ixi.zip`. These tables are openly available on [Zenodo](https:/doi.org/https://doi.org/10.5281/zenodo.3583070);
-* the pxp tables, to be located in the `EXIOBASE3/` folder, under a year-by-year .zip folder, e.g., `IOT_1995_pxp.zip`. These tables are openly available on [Zenodo](https:/doi.org/https://doi.org/10.5281/zenodo.3583070);
+* the ixi tables, to be located in the `EXIOBASE3/` folder, under a year-by-year .zip folder, e.g., `IOT_1995_ixi.zip`. These tables are openly available on [Zenodo](https://doi.org/10.5281/zenodo.3583070);
+* the pxp tables, to be located in the `EXIOBASE3/` folder, under a year-by-year .zip folder, e.g., `IOT_1995_pxp.zip`. These tables are openly available on [Zenodo](https://doi.org/10.5281/zenodo.3583070);
 * the supply-use tables, to be located under `EXIOBASE3/sut/current/`. These files are not openly available and need to be requested to the EXIOBASE3 development team;
 * the gross energy accounts, to be located under `EXIOBASE3/gross_energy_accounts/`, under a year-by-year folder, e.g., `IOT_1995_ixi/`. The gross energy accounts are not openly available and need to be requested to the EXIOBASE3 development team.
 
