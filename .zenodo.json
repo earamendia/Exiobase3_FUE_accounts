@@ -9,6 +9,13 @@
     "title": "Code to generate the final- and useful-stage energy and exergy extensions for EXIOBASE3",
     "version": "1.0.0",
     "access_right": "open",
+    "related_identifiers": [
+      {
+        "identifier" : "https://doi.org/10.5281/zenodo.22871201",
+        "relation": "isSourceOf",
+        "resource_type": "dataset"
+      }
+    ],
     "keywords": [
         "energy extensions",
         "energy accounts",
