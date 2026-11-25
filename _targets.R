@@ -703,5 +703,15 @@ list(
     export_results_to_csv(comp_FUE_to_IEA,
                           accounts_to_exclude = NA,
                           path = paste0(path_to_results, "test_comp_FUE_to_IEA.csv"))
+  ),
+  
+  ## Additional results for individual queries ##
+  
+  # Energy accounts at the industry-level and energy carrier level (eAccounts_exio_ei)
+  tar_target(
+    export_eAccounts_exio_ei,
+    export_results_to_rds(eAccounts_exio_ei,
+                          accounts_to_exclude = NA,
+                          path = paste0(path_to_results, "eAccounts_exio_ei.rds"))
   )
 )

@@ -494,13 +494,13 @@ compare_fue_to_tfc <- function(fe_accounts,
 
 
 # This function exports a file to csv
-export_results_to_csv <- function(object, accounts_to_exclude, path){
+export_results_to_rds <- function(object, accounts_to_exclude, path){
   if (any(is.na(accounts_to_exclude))){
     dt_to_write <- object
   } else {
     dt_to_write <- object[!Account %in% accounts_to_exclude,]
   }
-  data.table::fwrite(dt_to_write, path)
+  saveRDS(dt_to_write, path)
   return(path)
 }
 
